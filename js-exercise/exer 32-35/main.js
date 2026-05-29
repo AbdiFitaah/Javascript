@@ -17,7 +17,15 @@ function changeContent(){
 function addItem(){
     const newitem=document.createElement("li");
     newitem.textContent="items";
+    const button=document.createElement("button");
+    button.textContent="d"
+    newitem.append(button);
     list.append(newitem);
+
+    button.addEventListener("click",(event)=>{
+        let li= event.target.parentElement;
+        li.remove();
+    })
 }
 
 
